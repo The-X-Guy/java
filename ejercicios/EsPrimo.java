@@ -1,4 +1,5 @@
-import java.util.Scanner;
+//Alumno: Fran Gálvez. 2º ASIR.
+
 import java.io.*;
 public class EsPrimo {
 	public static boolean primo (int numero) {

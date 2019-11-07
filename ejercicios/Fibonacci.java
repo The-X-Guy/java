@@ -1,6 +1,6 @@
-import java.util.Scanner;
+//Alumno: Fran Gálvez. 2º ASIR.
 
-import javax.lang.model.util.ElementScanner6;
+import java.util.Scanner;
 
 public class Fibonacci {
     public static void main(String[] args) {
@@ -11,7 +11,7 @@ public class Fibonacci {
                 int n = teclado.nextInt();
                 long salida = FibonacciRecursivo(n);
                 System.out.print("Fib(" + n + ") = " +salida);
-
+                teclado.close();
             } catch (StackOverflowError e) {
                 System.out.println("Error: has introducido un numero negativo");
             }
@@ -22,7 +22,7 @@ public class Fibonacci {
             else if (n == 1)
                 return 1;
             else
-                return Fib(n-1) + Fib(n-2);
+                return FibonacciRecursivo(n-1) + FibonacciRecursivo(n-2);
         
     }
     public static long FibonacciIterativo (int n) {

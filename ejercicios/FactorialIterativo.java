@@ -1,3 +1,5 @@
+//Alumno: Fran Gálvez. 2º ASIR.
+
 import java.util.*;
 public class FactorialIterativo {
     public static void main(String[] args) {
@@ -13,6 +15,7 @@ public class FactorialIterativo {
             for (int i = 1; i <= numero; i++)
                 resultado *= i;
             System.out.print("El fatorial de " + numero + " es " + resultado);
+            teclado.close();
            //} catch (IOException e) {
         } catch (InputMismatchException e) {
             System.out.print("Error: introduce un numero entero y positivo.");            
