@@ -1,0 +1,55 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import java.awt.BorderLayout;
+import javax.swing.JSplitPane;
+import javax.swing.JTextArea;
+
+public class SplitPane {
+
+	private JFrame frame;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					SplitPane window = new SplitPane();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public SplitPane() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(new BorderLayout(0, 0));
+		
+		JSplitPane splitPane = new JSplitPane();
+		frame.getContentPane().add(splitPane, BorderLayout.CENTER);
+		splitPane.setDividerLocation(200);
+		
+		JTextArea textArea = new JTextArea();
+		splitPane.setLeftComponent(textArea);
+		
+		JTextArea textArea_1 = new JTextArea();
+		splitPane.setRightComponent(textArea_1);
+	}
+
+}

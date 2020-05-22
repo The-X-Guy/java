@@ -1,0 +1,65 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.JScrollPane;
+import javax.swing.JTabbedPane;
+import javax.swing.JLayeredPane;
+import javax.swing.JComboBox;
+
+public class tablas {
+
+	private JFrame frame;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					tablas window = new tablas();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public tablas() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 653, 342);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
+		tabbedPane.setBounds(44, 49, 412, 161);
+		frame.getContentPane().add(tabbedPane);
+		
+		JLayeredPane layeredPane = new JLayeredPane();
+		tabbedPane.addTab("New tab", null, layeredPane, null);
+		
+		JLayeredPane layeredPane_1 = new JLayeredPane();
+		layeredPane_1.setBounds(127, 40, 1, 1);
+		layeredPane.add(layeredPane_1);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setBounds(135, 40, 31, 22);
+		layeredPane.add(comboBox);
+		
+		JLayeredPane layeredPane_2 = new JLayeredPane();
+		tabbedPane.addTab("New tab", null, layeredPane_2, null);
+	}
+}

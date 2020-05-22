@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Relacion2",
+            "request": "launch",
+            "mainClass": "Relacion2",
+            "projectName": "relaciones de problemas_52d5b5cb"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MiClase",
+            "request": "launch",
+            "mainClass": "MiClase",
+            "projectName": "relaciones de problemas_52d5b5cb"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Ejercicios",
+            "request": "launch",
+            "mainClass": "Ejercicios",
+            "projectName": "relaciones de problemas_52d5b5cb"
+        }
+    ]
+}

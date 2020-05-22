@@ -1,0 +1,39 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - EscribirASCII",
+            "request": "launch",
+            "mainClass": "EscribirASCII",
+            "projectName": "ejercicios_java_ef278033"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Euromillones",
+            "request": "launch",
+            "mainClass": "Euromillones",
+            "projectName": "ejercicios_java_ef278033"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Loteria",
+            "request": "launch",
+            "mainClass": "Loteria",
+            "projectName": "ejercicios_java_ef278033"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - UsaRacionales",
+            "request": "launch",
+            "mainClass": "UsaRacionales",
+            "projectName": "ejercicios_java_ef278033"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Recursividad",
+            "request": "launch",
+            "mainClass": "Recursividad",
+            "projectName": "ejercicios_java_ef278033"
+        }
+    ]
+}

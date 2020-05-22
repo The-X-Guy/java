@@ -1,0 +1,72 @@
+import java.awt.EventQueue;
+import java.awt.Font;
+
+import javax.swing.JFrame;
+import javax.swing.JSlider;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import javax.swing.event.ChangeListener;
+import javax.swing.event.ChangeEvent;
+
+public class EjemploSlider {
+
+	private JFrame frame;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					EjemploSlider window = new EjemploSlider();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public EjemploSlider() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 643, 413);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JLabel lblPrueba = new JLabel("Etiqueta de prueba");
+		lblPrueba.setHorizontalAlignment(SwingConstants.CENTER);
+		lblPrueba.setBounds(137, 154, 357, 123);
+		frame.getContentPane().add(lblPrueba);
+		
+		JSlider slider = new JSlider();
+		slider.addChangeListener(new ChangeListener() {
+			public void stateChanged(ChangeEvent arg0) {
+				Font f = new Font("monospace", Font.ITALIC, slider.getValue());
+				lblPrueba.setFont(f);
+			}
+		});
+		slider.setMinimum(8);
+		slider.setSnapToTicks(true);
+		slider.setPaintLabels(true);
+		slider.setMaximum(72);
+		slider.setValue(12);
+		slider.setMinorTickSpacing(1);
+		slider.setMajorTickSpacing(8);
+		slider.setPaintTicks(true);
+		slider.setBounds(84, 60, 468, 52);
+		frame.getContentPane().add(slider);
+		
+		
+	}
+}
